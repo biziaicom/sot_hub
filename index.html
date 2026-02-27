@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Single Singers 合宿 2026</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app-container">
+    <header>
+      <button class="back-btn" id="backBtn" onclick="goHome()"><i class="fas fa-chevron-left"></i></button>
+      <div class="header-title" id="headerTitle">SS 合宿 2026</div>
+      <div class="header-controls">
+        <button class="icon-btn" onclick="toggleFontSize()" title="Text Size">
+          <i class="fas fa-search-plus" style="margin-right: 4px;"></i> Aa
+        </button>
+        <button class="icon-btn" onclick="toggleLanguage()" id="langBtn">EN</button>
+      </div>
+    </header>
+
+    <div id="homePage" class="page active">
+      <div class="page-inner">
+        <div class="home-layout">
+          <div class="hero-card">
+            <div class="dday-badge" id="ddayBadge">D-Day</div>
+            <div class="hero-title">Single Singers</div>
+            <div class="hero-subtitle lang-ja">2026年 合宿のご案内</div>
+            <div class="hero-subtitle lang-en">2026 Camp Guide</div>
+            <div class="hero-date">
+              <i class="far fa-calendar-alt"></i>
+              <span class="lang-ja">5月3日(日) - 5月5日(火)</span>
+              <span class="lang-en">May 3 (Sun) - May 5 (Tue)</span>
+            </div>
+          </div>
+
+          <div class="menu-grid">
+            <div class="menu-item" onclick="openPage('schedulePage', 'スケジュール', 'Schedule')">
+              <i class="fas fa-clock menu-icon"></i>
+              <div class="menu-text lang-ja">スケジュール</div>
+              <div class="menu-text lang-en">Schedule</div>
+            </div>
+            <div class="menu-item" onclick="openPage('accessPage', '行程・アクセス', 'Access & Itinerary')">
+              <i class="fas fa-bus menu-icon"></i>
+              <div class="menu-text lang-ja">行程・アクセス</div>
+              <div class="menu-text lang-en">Access</div>
+            </div>
+            <div class="menu-item" onclick="openPage('itemsPage', '持ち物・費用', 'Items & Fees')">
+              <i class="fas fa-suitcase-rolling menu-icon"></i>
+              <div class="menu-text lang-ja">持ち物・費用</div>
+              <div class="menu-text lang-en">Items & Fees</div>
+            </div>
+            <div class="menu-item" onclick="openPage('faqPage', 'よくある質問', 'FAQ')">
+              <i class="fas fa-question-circle menu-icon"></i>
+              <div class="menu-text lang-ja">よくある質問</div>
+              <div class="menu-text lang-en">FAQ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="schedulePage" class="page">
+      <div class="page-inner">
+        <div class="content-card">
+          <h2 class="lang-ja">日程表</h2>
+          <h2 class="lang-en">Schedule</h2>
+
+          <div class="tabs-header">
+            <button class="tab-btn active" onclick="switchTab('day1', this)"><span class="lang-ja">5/3 (日)</span><span class="lang-en">May 3</span></button>
+            <button class="tab-btn" onclick="switchTab('day2', this)"><span class="lang-ja">5/4 (月)</span><span class="lang-en">May 4</span></button>
+            <button class="tab-btn" onclick="switchTab('day3', this)"><span class="lang-ja">5/5 (火)</span><span class="lang-en">May 5</span></button>
+          </div>
+
+          <div id="day1" class="tab-content active timeline">
+            <div class="time-item"><div class="time-label">09:50</div><div class="time-desc"><span class="lang-ja">新宿駅 集合</span><span class="lang-en">Gather at Shinjuku Station</span></div></div>
+            <div class="time-item"><div class="time-label">12:00</div><div class="time-desc"><span class="lang-ja">センター着 / 昼食 (各自持参)</span><span class="lang-en">Arrive at Center / Lunch (Bring your own)</span></div></div>
+            <div class="time-item"><div class="time-label">13:00 ~ 17:00</div><div class="time-desc"><span class="lang-ja">練習</span><span class="lang-en">Practice</span></div></div>
+            <div class="time-item"><div class="time-label">17:00</div><div class="time-desc"><span class="lang-ja">入浴・自由時間</span><span class="lang-en">Bath / Free Time</span></div></div>
+            <div class="time-item"><div class="time-label">18:00</div><div class="time-desc"><span class="lang-ja">夕食</span><span class="lang-en">Dinner</span></div></div>
+            <div class="time-item"><div class="time-label">19:00 ~ 21:00</div><div class="time-desc"><span class="lang-ja">練習</span><span class="lang-en">Practice</span></div></div>
+            <div class="time-item"><div class="time-label">21:30 ~</div><div class="time-desc"><span class="lang-ja">宴会</span><span class="lang-en">Party</span></div></div>
+          </div>
+
+          <div id="day2" class="tab-content timeline">
+            <div class="time-item"><div class="time-label">07:00</div><div class="time-desc"><span class="lang-ja">起床</span><span class="lang-en">Wake up</span></div></div>
+            <div class="time-item"><div class="time-label">08:00</div><div class="time-desc"><span class="lang-ja">朝食</span><span class="lang-en">Breakfast</span></div></div>
+            <div class="time-item"><div class="time-label">09:00 ~ 12:00</div><div class="time-desc"><span class="lang-ja">練習</span><span class="lang-en">Practice</span></div></div>
+            <div class="time-item"><div class="time-label">12:00</div><div class="time-desc"><span class="lang-ja">昼食</span><span class="lang-en">Lunch</span></div></div>
+            <div class="time-item"><div class="time-label">13:00 ~ 17:00</div><div class="time-desc"><span class="lang-ja">練習</span><span class="lang-en">Practice</span></div></div>
+            <div class="time-item"><div class="time-label">17:00</div><div class="time-desc"><span class="lang-ja">入浴・自由時間</span><span class="lang-en">Bath / Free Time</span></div></div>
+            <div class="time-item"><div class="time-label">18:00</div><div class="time-desc"><span class="lang-ja">夕食</span><span class="lang-en">Dinner</span></div></div>
+            <div class="time-item"><div class="time-label">19:00</div><div class="time-desc"><span class="lang-ja">練習</span><span class="lang-en">Practice</span></div></div>
+            <div class="time-item"><div class="time-label highlight">20:00</div><div class="time-desc highlight"><i class="fas fa-music"></i> <span class="lang-ja">ミニコンサート</span><span class="lang-en">Mini Concert</span></div></div>
+            <div class="time-item"><div class="time-label">21:30 ~</div><div class="time-desc"><span class="lang-ja">宴会</span><span class="lang-en">Party</span></div></div>
+          </div>
+
+          <div id="day3" class="tab-content timeline">
+            <div class="time-item"><div class="time-label">07:00</div><div class="time-desc"><span class="lang-ja">起床</span><span class="lang-en">Wake up</span></div></div>
+            <div class="time-item"><div class="time-label">08:00</div><div class="time-desc"><span class="lang-ja">朝食</span><span class="lang-en">Breakfast</span></div></div>
+            <div class="time-item"><div class="time-label">09:00 ~ 12:00</div><div class="time-desc"><span class="lang-ja">練習</span><span class="lang-en">Practice</span></div></div>
+            <div class="time-item"><div class="time-label">12:00</div><div class="time-desc"><span class="lang-ja">昼食</span><span class="lang-en">Lunch</span></div></div>
+            <div class="time-item"><div class="time-label">12:50</div><div class="time-desc"><span class="lang-ja">帰りのバス出発</span><span class="lang-en">Bus departs</span></div></div>
+            <div class="time-item"><div class="time-label">13:20</div><div class="time-desc"><span class="lang-ja">藤野駅着・解散</span><span class="lang-en">Arrive at Fujino St. & Dismiss</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="accessPage" class="page">
+      <div class="page-inner">
+        <div class="content-card">
+          <h2 class="lang-ja">集合・解散</h2>
+          <h2 class="lang-en">Meeting & Dismissal</h2>
+          <ul class="styled-list">
+            <li><strong><span class="lang-ja">1日目 (5/3)</span><span class="lang-en">Day 1 (May 3)</span></strong><br>
+              <span class="lang-ja">09:50 京王線新宿駅集合<br>11:30 センター手配バス乗車<br>12:00 青根緑の休暇村着</span>
+              <span class="lang-en">09:50 Meet at Shinjuku St.<br>11:30 Take center bus<br>12:00 Arrive at Center</span>
+            </li>
+            <li><strong><span class="lang-ja">3日目 (5/5)</span><span class="lang-en">Day 3 (May 5)</span></strong><br>
+              <span class="lang-ja">12:50 センター発バス乗車<br>13:20 JR藤野駅着・解散</span>
+              <span class="lang-en">12:50 Bus departs<br>13:20 Arrive at Fujino St.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h2 class="lang-ja">施設情報</h2>
+          <h2 class="lang-en">Facility Info</h2>
+          <p class="facility-text" style="font-size:1.05rem; line-height:1.6;">
+            <strong><span class="lang-ja">青根緑の休暇村</span><span class="lang-en">Aone Midori no Kyukamura</span></strong><br>
+            <i class="fas fa-map-marker-alt"></i> <span class="lang-ja">神奈川県相模原市緑区青根807-2</span><span class="lang-en">Aone 807-2, Midori-ku, Sagamihara</span><br>
+            <i class="fas fa-phone"></i> 042-787-2215
+          </p>
+          <div class="map-wrapper">
+            <iframe
+              title="Aone Midori no Kyukamura Map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=%E9%9D%92%E6%A0%B9%E7%B7%91%E3%81%AE%E4%BC%91%E6%9A%87%E6%9D%91%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%9B%B8%E6%A8%A1%E5%8E%9F%E5%B8%82&output=embed">
+            </iframe>
+          </div>
+          <a class="map-link"
+             href="https://www.google.com/maps/search/?api=1&query=%E9%9D%92%E6%A0%B9%E7%B7%91%E3%81%AE%E4%BC%91%E6%9A%87%E6%9D%91%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%9B%B8%E6%A8%A1%E5%8E%9F%E5%B8%82%E7%B7%91%E5%8C%BA%E9%9D%92%E6%A0%B9807-2"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fas fa-map-marked-alt"></i>
+            <span class="lang-ja">Googleマップで開く</span>
+            <span class="lang-en">Open in Google Maps</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="itemsPage" class="page">
+      <div class="page-inner">
+        <div class="content-card">
+          <h2 class="lang-ja">持ち物</h2>
+          <h2 class="lang-en">What to Bring</h2>
+          <ul class="styled-list">
+            <li><span class="lang-ja">楽譜（追加譜面含む）</span><span class="lang-en">Scores (including extra parts)</span></li>
+            <li><span class="lang-ja">キーボード (各パート毎)</span><span class="lang-en">Keyboard (per part)</span></li>
+            <li><strong><span class="lang-ja">1日目の昼食</span><span class="lang-en">Lunch for Day 1</span></strong></li>
+            <li><span class="lang-ja">その他各自必要なもの</span><span class="lang-en">Personal belongings</span></li>
+          </ul>
+          <p class="note-text" style="margin-top:10px; padding:10px; background:#f4f7fc; border-radius:8px;">
+            <span class="lang-ja">※シャンプー、ボディーソープ、タオル、浴衣、歯ブラシは施設にあります。夜は冷え込むため防寒対策をお願いします。</span>
+            <span class="lang-en">*Shampoo, body soap, towel, yukata, toothbrush are provided. Please bring warm clothes for cold nights.</span>
+          </p>
+        </div>
+
+        <div class="content-card">
+          <h2 class="lang-ja">費用 (予定)</h2>
+          <h2 class="lang-en">Estimated Fees</h2>
+          <ul class="styled-list">
+            <li><strong><span class="lang-ja">2泊:</span><span class="lang-en">2 Nights:</span></strong> <span class="lang-ja">未定 (昨年は23,000円)</span><span class="lang-en">TBD (Last year: 23,000 JPY)</span></li>
+            <li><strong><span class="lang-ja">1泊:</span><span class="lang-en">1 Night:</span></strong> <span class="lang-ja">未定 (昨年は12,000円)</span><span class="lang-en">TBD (Last year: 12,000 JPY)</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="faqPage" class="page">
+      <div class="page-inner">
+        <div class="content-card">
+          <h2 class="lang-ja">よくある質問</h2>
+          <h2 class="lang-en">FAQ</h2>
+
+          <details><summary><span class="lang-ja">Q1. 参加費は昨年と同じですか？</span><span class="lang-en">Q1. Will the participation fee be the same as last year?</span></summary><p><span class="lang-ja">A: まだ未定です。参考までに、参加費は2024年（2泊）が21,000円、2025年が23,000円でした。今年はセンターの宿泊費用の変動や、物価高騰（宴会用の酒類・お菓子・コーヒーなどの買い出し費用）を考慮し、昨年から1,000円程度の増額になる可能性もあります。最終的な金額は合宿委員会で予算を算出した後にご案内します。</span><span class="lang-en">A: It is not finalized yet. For reference, the fee was 21,000 JPY in 2024 (2 nights) and 23,000 JPY in 2025. This year, lodging cost changes and inflation (drinks, snacks, coffee, and other party supplies) may increase the fee by around 1,000 JPY from last year. The final amount will be announced after the camp committee completes the budget.</span></p></details>
+          <details><summary><span class="lang-ja">Q2. 入浴施設はどうなりますか？昨年と同じように、宿泊施設内の狭いシャワー室を使わなければなりませんか？</span><span class="lang-en">Q2. What is the bathing arrangement this year? Do we have to use the small shower room again?</span></summary><p><span class="lang-ja">A: 今年は近隣の温泉施設「いやしの湯」が再び利用できるようになります。昨年は工事中のため宿泊施設内の浴室を利用しましたが、今年は運営が再開されます。2024年の例に倣い、各日に入浴券を配布する予定です。詳細な入浴可能時間は、センターと調整した上でお知らせします。</span><span class="lang-en">A: This year, the nearby hot spring facility "Iyashi no Yu" will be available again. Last year we used the lodging bath area because of construction, but operations are now resumed. As in 2024, we plan to distribute bath tickets for each day. Detailed bathing hours will be shared after coordination with the center.</span></p></details>
+          <details><summary><span class="lang-ja">Q3. 全日程は参加できず、途中から合流したり早退したりする必要があるのですが、交通手段はありますか？</span><span class="lang-en">Q3. I cannot attend the full schedule. Can I join late or leave early, and is there transportation?</span></summary><p><span class="lang-ja">A: はい、部分参加も可能です。ただし、無料のマイクロバスは1日目の集合時と3日目の解散時のみ運行します。途中参加・早退の場合は、藤野駅から路線バスで「やまなみ温泉」まで行き、そこから事前予約制の乗合タクシーで「いやしの湯」までお越しいただくことになります。乗合タクシー（YM交通：042-780-0777）は時刻表に則った運行となり、利用できる便が限られているため、必ずしおりに記載された時刻表を確認し、各自でご予約をお願いします。</span><span class="lang-en">A: Yes, partial participation is possible. However, the free microbus runs only at Day 1 gathering and Day 3 dismissal. If you join late or leave early, take a local bus from Fujino Station to Yamanami Onsen, then use the reservation-based shared taxi to Iyashi no Yu. The shared taxi (YM Kotsu: 042-780-0777) follows a fixed timetable and has limited runs, so please check the schedule in the guide and make your own reservation.</span></p></details>
+          <details><summary><span class="lang-ja">Q4. 食事や宴会用のお酒はどのように提供されますか？</span><span class="lang-en">Q4. How will meals and party drinks be provided?</span></summary><p><span class="lang-ja">A: 1日目の昼食は、各自お弁当などをご持参ください。2・3日目の昼食は施設から提供されます。宴会の際、施設側への配慮（商売上の理由）として夕食時のビールなどはセンターに注文しますが、それ以外の追加の酒類や軽食は合宿委員がスーパー等で買い出しをして用意します。個人的なお好みのお菓子や飲み物の差し入れも大歓迎です。</span><span class="lang-en">A: Please bring your own lunch on Day 1. Lunch on Days 2 and 3 is provided by the facility. For the party, beer and similar drinks served at dinner are ordered from the center as a courtesy to their business operations, while additional alcohol and snacks are purchased by the camp committee. Personal contributions of snacks and drinks are very welcome.</span></p></details>
+          <details><summary><span class="lang-ja">Q5. 高尾駅での乗り換え時間が短いようですが、大丈夫でしょうか？</span><span class="lang-en">Q5. The transfer time at Takao Station looks short. Is that okay?</span></summary><p><span class="lang-ja">A: 高尾駅での乗り換えは、通路やホームの混雑、電車の遅延などにより、時間が非常にタイトになることがあります。過去の合宿でも実際に乗り遅れたメンバーがいました。乗り遅れるとセンター行きの送迎バスに乗れなくなる可能性があるため、時間に余裕を持って出発するか、京王線を1本早い電車に乗ることをお勧めします。</span><span class="lang-en">A: Transfers at Takao Station can be very tight due to crowded platforms, passageways, and possible train delays. In past camps, some members actually missed the connection. Missing that train may cause you to miss the center shuttle bus, so we recommend leaving earlier or taking one earlier Keio train.</span></p></details>
+          <details><summary><span class="lang-ja">Q6. 部屋割りはどうなりますか？いびきがひどかったり、睡眠に敏感だったりするのですが、個室はありますか？</span><span class="lang-en">Q6. How are rooms assigned? Are private rooms available for sleep-sensitive members?</span></summary><p><span class="lang-ja">A: 残念ながら1人部屋はご用意できません。2024年の例では、最大18名の大部屋、最大5名の中部屋2つ、最大3名の小部屋に分かれていました。厳密な部屋割りは行いませんが、睡眠に個別の配慮が必要な方には、中部屋1つと小部屋を優先的に割り当てます。大部屋を利用される方は、特に朝7時前は物音に配慮して過ごしていただくようお願いします。</span><span class="lang-en">A: Unfortunately, single rooms are not available. In 2024, rooms were arranged as one large room (up to 18), two medium rooms (up to 5 each), and one small room (up to 3). While strict room assignments are not fixed, one medium room and the small room are prioritized for people needing sleep-related accommodations. If you stay in the large room, please be especially quiet before 7:00 AM.</span></p></details>
+          <details><summary><span class="lang-ja">Q7. 今年はコンサートが控えていると聞きましたが、合宿での練習スケジュールは厳しいですか？</span><span class="lang-en">Q7. I heard there is a concert this year. Will the camp practice schedule be intense?</span></summary><p><span class="lang-ja">A: はい、今年はコンサートを控えているため、密度の濃い練習が行われる予定です。2024年の合宿時もコンサートがあり、技術委員のお二人に練習のコマをしっかりと割り振っていただいた実績があります。詳細なパート別・全体練習のスケジュールは、技術委員と相談して決まり次第お知らせします。</span><span class="lang-en">A: Yes, because a concert is coming up, practice is expected to be intensive this year. In 2024, there was also a concert and the technical committee successfully structured focused practice blocks. Detailed section and full-group schedules will be announced once finalized with the technical committee.</span></p></details>
+          <details><summary><span class="lang-ja">Q8. ミニコンサートの発表順やグループ編成は、いつどのように決めますか？</span><span class="lang-en">Q8. When and how will mini-concert order and group setup be decided?</span></summary><p><span class="lang-ja">A: ミニコンサートへの参加エントリーは、4月末頃まで受け付ける予定です。発表の順番は、合宿当日に各ユニットの代表者が集まり、あみだくじ等で公平に決定します。練習は決められた自由時間などを使って行っていただきます。</span><span class="lang-en">A: Entry for the mini concert is planned to be open until around the end of April. Performance order will be decided fairly on camp day by unit representatives, for example using a lottery method. Practice should be done during designated free-time slots.</span></p></details>
+          <details><summary><span class="lang-ja">Q9. 朝シャワーを浴びたいのですが、宿泊施設で可能ですか？</span><span class="lang-en">Q9. I want to take a morning shower. Is that possible at the lodging?</span></summary><p><span class="lang-ja">A: はい、可能です。希望される方は、宿泊施設内の浴室を利用して朝シャワーを浴びることができます。事前にセンターにお願いしておけば、朝7時にボイラーを稼働させてもらえます。ただし、貸し切りではない場合（他のお客様がいる場合）は、入浴時間が制限される可能性もありますのでご了承ください。</span><span class="lang-en">A: Yes, it is possible. If requested, you can use the facility bath area for a morning shower. If arranged in advance, the center can start the boiler at 7:00 AM. Please note that if the bath is not private (other guests are present), usage time may be limited.</span></p></details>
+          <details><summary><span class="lang-ja">Q10. 練習用の楽譜は合宿当日に配られますか？それとも各自で持参する必要がありますか？</span><span class="lang-en">Q10. Will practice scores be handed out at camp, or should we bring our own?</span></summary><p><span class="lang-ja">A: 楽譜は各自でご持参ください。事前に追加の楽譜などをGoogleドライブのリンクで共有する予定ですので、あらかじめご確認ください。また、合宿直前の定期練習で配布される楽譜がある場合は、そちらも忘れずに必ずお持ちください。</span><span class="lang-en">A: Please bring your own scores. Additional scores will be shared in advance via a Google Drive link, so please check beforehand. If any scores are distributed during regular practice right before camp, please make sure to bring those as well.</span></p></details>
+          <details><summary><span class="lang-ja">Q11. 3日目の合宿がすべて終わった後、テニスなどの親睦活動はありますか？</span><span class="lang-en">Q11. After camp ends on Day 3, will there be social activities like tennis?</span></summary><p><span class="lang-ja">A: 2024年の合宿では、終了後に残ってテニスをする時間がありました。道具はセンターで借りられますが、その場合、帰りの藤野駅までは各自で帰っていただくことになります。今年もテニスをご希望の方がいらっしゃれば、事前のアンケート時にお知らせいただき、人数を把握したいと思います。</span><span class="lang-en">A: In 2024, there was time to stay and play tennis after the camp program ended. Equipment can be rented at the center, but in that case you need to return to Fujino Station on your own. If people want tennis this year as well, please indicate it in the pre-camp survey so we can estimate participants.</span></p></details>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
