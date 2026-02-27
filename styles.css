@@ -125,7 +125,7 @@ header {
   background: linear-gradient(135deg, var(--msc-blue) 0%, #004a8f 100%);
   color: var(--white);
   border-radius: 18px;
-  padding: 36px 22px;
+  padding: 68px 22px 36px;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 40, 85, 0.24);
 }
